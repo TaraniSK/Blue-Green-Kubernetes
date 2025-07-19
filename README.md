@@ -62,10 +62,7 @@ Code changes are introduced only in the green environment. The blue environment 
 ### 💾 Shared Database
 Despite switching application versions, the backend MySQL database remains consistent and persistent. This ensures all user data and application state is preserved.
 
-
-
-## 🧪 Visual Cues
-
+### 🧪 Visual Cues
 The green version of Orgpulse contains visible styling or logo changes, allowing developers and testers to confirm the correct version is live.
 
 ---
@@ -86,4 +83,3 @@ Blue-Green Deployment is a powerful pattern for **high-availability systems** wh
 
 Orgpulse demonstrates this strategy in action, serving as a foundation for scalable and production-grade web deployments.
 
----
