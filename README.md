@@ -1,4 +1,3 @@
-
 # 🌐 Orgpulse – Blue-Green Deployment using Kubernetes
 
 **Orgpulse** is a PHP-MySQL web application deployed using a **Blue-Green Deployment** strategy on **Kubernetes**. This project demonstrates how to achieve **zero-downtime updates**, **safe rollbacks**, and **seamless user experience** during production releases by managing two parallel environments.
@@ -24,29 +23,34 @@ At any time, only one of them is actively receiving traffic. Switching from one 
 
 The Orgpulse project simulates a production-grade blue-green deployment scenario using:
 
-- **Kubernetes (Minikube)**: As the container orchestration platform.
-- **PHP + MySQL**: Web application stack.
-- **phpMyAdmin (optional)**: For database inspection.
-- **YAML Configs**: Separate manifests for blue and green deployments.
+- **Kubernetes (Minikube)** – Container orchestration platform  
+- **PHP + MySQL** – Web application stack  
+- **phpMyAdmin (optional)** – For database inspection  
+- **YAML Configs** – Separate manifests for blue and green deployments
 
 ---
 
 ## 🧱 System Architecture
 
-         +------------------------+
-         |    Kubernetes Cluster  |
-         +------------------------+
-          |            |
-    +-----+-----+  +---+-----+
-    | Blue Pods |  | Green Pods |   <- Application Versions
-    +-----+-----+  +---+-----+
-          |            |
-         +-------------+
-         |   Service   |   <- Routes traffic to either Blue or Green
-         +-------------+
-                |
-            End Users
-```
+     +------------------------+
+     |    Kubernetes Cluster  |
+     +------------------------+
+            |         |
+     +------+         +------+
+     | Blue Pods |    | Green Pods |
+     +------+---+     +---+--------+
+            |             |
+            +-------------+
+                  |
+             +----------+
+             |  Service |
+             +----------+
+                  |
+             End Users
+
+> Only one environment (blue or green) receives traffic at a time, depending on the active `selector` in the service definition.
+
+---
 
 ## ✅ Key Concepts Demonstrated
 
@@ -83,3 +87,4 @@ Blue-Green Deployment is a powerful pattern for **high-availability systems** wh
 
 Orgpulse demonstrates this strategy in action, serving as a foundation for scalable and production-grade web deployments.
 
+---
