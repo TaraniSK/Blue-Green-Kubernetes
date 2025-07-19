@@ -51,11 +51,6 @@ The Orgpulse project simulates a production-grade blue-green deployment scenario
             End Users
 ```
 
-```
-
-- **Deployment Manifests**: Two separate deployments (`blue` and `green`) run simultaneously inside the cluster.
-- **Single Service**: Exposes only one environment at a time by selecting either `color: blue` or `color: green`.
-- **Shared MySQL DB**: Both versions use the same database to maintain data consistency.
 
 ---
 
