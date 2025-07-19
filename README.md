@@ -33,9 +33,6 @@ The Orgpulse project simulates a production-grade blue-green deployment scenario
 
 ## 🧱 System Architecture
 
-```
-
-```
          +------------------------+
          |    Kubernetes Cluster  |
          +------------------------+
@@ -50,9 +47,6 @@ The Orgpulse project simulates a production-grade blue-green deployment scenario
                 |
             End Users
 ```
-
-
----
 
 ## ✅ Key Concepts Demonstrated
 
